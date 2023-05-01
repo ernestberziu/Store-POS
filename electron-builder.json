@@ -1,0 +1,41 @@
+{
+    "publish": {
+      "provider": "generic",
+      "url": "https://myappserver.com/updates/"
+    },
+    "productName": "My App",
+    "appId": "com.myapp.app",
+    "directories": {
+      "buildResources": "buildResources",
+      "output": "release"
+    },
+    "files": ["src/", "node_modules/", "package.json"],
+    "mac": {
+      "target": ["dmg", "zip"], 
+      "artifactName": "POS.dmg"
+    },
+    "win": {
+      "target": ["nsis", "zip"], 
+      "artifactName": "POS.exe"
+    },
+    "linux": {
+      "target": ["AppImage"],
+      "artifactName": "POS.dmg"
+    },
+    "dmg": {
+      "title": "POS",
+      "contents": [
+        {
+          "x": 300,
+          "y": 360
+        },
+        {
+          "x": 490,
+          "y": 360,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+  
